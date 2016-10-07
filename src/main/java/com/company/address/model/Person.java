@@ -2,6 +2,7 @@ package com.company.address.model;
 
 import java.time.LocalDate;
 
+import com.company.address.util.CryptoStringAdapter;
 import com.company.address.util.LocalDateAdapter;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
@@ -50,6 +51,7 @@ public class Person {
         this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
     }
 
+    @XmlJavaTypeAdapter(CryptoStringAdapter.class)
     public String getFirstName() {
         return firstName.get();
     }

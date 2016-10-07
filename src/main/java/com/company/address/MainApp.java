@@ -6,6 +6,7 @@ import java.util.prefs.Preferences;
 
 import com.company.address.model.Person;
 import com.company.address.model.PersonListWrapper;
+import com.company.address.util.Crypto;
 import com.company.address.view.PersonEditDialogController;
 import com.company.address.view.PersonOverviewController;
 import com.company.address.view.RootLayoutController;
@@ -48,6 +49,9 @@ public class MainApp extends Application {
         personData.add(new Person("Anna", "Best"));
         personData.add(new Person("Stefan", "Meier"));
         personData.add(new Person("Martin", "Mueller"));
+
+        Crypto.setPassword("hello");
+        //Crypto.setPassword("coucou");
     }
 
     /**
